@@ -22,7 +22,7 @@ async function askAI() {
 
     const data = await response.json();
 
-    result.innerText = data.reply || data.error || "No response";
+  result.innerText = data.data?.reply || data.reply || data.error || "No response";
   } catch (err) {
     result.innerText = "Error: " + err.message;
   }
