@@ -21,7 +21,7 @@ async function askAI() {
     });
 
     const data = await response.json();
-alert(JSON.stringify(data));
+
   result.innerText = data.data?.reply || data.reply || data.error || "No response";
   } catch (err) {
     result.innerText = "Error: " + err.message;
